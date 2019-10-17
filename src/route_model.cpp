@@ -51,6 +51,9 @@ void RouteModel::Node::FindNeighbors() {
     }
 }
 
+float RouteModel::Node::FValue() const {
+    return g_value + h_value;
+}
 
 RouteModel::Node &RouteModel::FindClosestNode(float x, float y) {
     Node input;
